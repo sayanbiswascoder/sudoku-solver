@@ -1,7 +1,7 @@
 import { data } from "autoprefixer";
 import React, { useEffect, useRef, useState } from "react";
 
-const SudokuBox = ({ solved, setGameArray }) => {
+const SudokuBox = ({ solved, setSolved, setGameArray }) => {
   const [size, setSize] = useState(0);
   const [array, setArray] = useState([]);
   const [selectedBox, setSelectedBox] = useState([,]);
@@ -48,6 +48,7 @@ const SudokuBox = ({ solved, setGameArray }) => {
       }
       array.push(arr);
     }
+    setSolved(false)
     setArray(array);
     setRender(!render);
   };

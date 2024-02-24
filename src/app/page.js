@@ -23,7 +23,7 @@ export default function Home() {
   },[gameArray])
   return (
     <main className="h-[100vh] flex flex-col items-center justify-center">
-      <SudokuBox solved={solved} setGameArray={setGameArray}/>
+      <SudokuBox solved={solved} setSolved={setSolved} setGameArray={setGameArray}/>
       <div className="h-[15%]"></div>
     </main>
   );
